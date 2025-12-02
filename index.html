@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сатурн: Сақиналы Алып Анализі</title>
+    <!-- Подключение Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Настройка шрифтов и цветов (Сатурн стилі) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'black-void': '#000000',
+                        'saturn-primary': '#fbbf24', // Алтын-сары (Amber/Gold)
+                        'saturn-accent': '#f97316', // Қызғылт сары (Orange/Ring Accent)
+                        'dark-slate': '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Consolas', 'Monaco', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Полностью черный фон для "космического" вида */
+        body {
+            background-color: #000000;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Эффект свечения для заголовков и карточек (Сатурн киберпанк стиль) */
+        .neon-glow {
+            text-shadow: 0 0 5px #f97316, 0 0 10px #f97316; /* Қызғылт сары свечение */
+            transition: all 0.3s;
+        }
+        
+        .card-border {
+            border: 1px solid rgba(249, 115, 22, 0.3); /* Легкая рамка (Қызғылт сары) */
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4); /* Неоновое свечение */
+        }
+        
+        .card-border:hover {
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.7), 0 0 40px rgba(249, 115, 22, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Список фактов */
+        .fact-item {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .fact-item::before {
+            content: ">>"; /* Футуристический маркер */
+            color: #fbbf24; /* Алтын маркер */
+            position: absolute;
+            left: 0;
+            font-family: 'Monospace', monospace;
+        }
+
+        .fact-title {
+            color: #f97316; /* Қызғылт сары негізгі түс */
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <header class="text-center mb-16">
+        <h1 class="text-7xl font-extrabold text-white mb-2 tracking-wider">
+            <!-- БАСТЫ ТАҚЫРЫП -->
+            <span class="neon-glow text-saturn-accent">САТУРН</span>
+        </h1>
+        <p class="text-2xl text-saturn-primary font-mono">Күн жүйесінің сұлулығы: Ақпараттық Массив</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto">
+        
+        <!-- Главная карточка Сатурн -->
+        <section class="p-8 md:p-12 bg-dark-slate card-border rounded-xl mb-12">
+            <div class="flex flex-col items-center justify-center mb-6">
+                
+                <!-- САТУРННЫҢ ФОТОСЫ ОСЫ ЖЕРДЕ -->
+                <img 
+                    src="7.png"
+                    alt="Сатурн планетасының фотосы"
+                    class="w-60 h-60 rounded-full object-cover mb-4 border-2 border-saturn-accent shadow-xl shadow-saturn-accent/50"
+                    onerror="this.onerror=null; this.src='https://placehold.co/80x80/000000/fbbf24?text=SATURN%0A7.PNG'"
+                >
+                
+                <h2 class="text-4xl font-bold text-saturn-primary">Сатурн (Saturn)</h2>
+                <p class="text-lg text-slate-400 mt-2 font-mono">Сақиналы алып: Системалық сипаттама</p>
+            </div>
+
+            <!-- Общая информация -->
+            <div class="text-lg leading-relaxed text-center mb-8 border-b border-gray-700 pb-6">
+                <p class="text-slate-200">
+                    Сатурн — Күн жүйесіндегі алтыншы және Юпитерден кейінгі екінші үлкен планета. Ол негізінен сутегі мен гелийден тұратын газды алып. Оның ең танымал ерекшелігі — <span class="text-saturn-accent font-bold">мұз бен тау жыныстарынан</span> тұратын әдемі, ауқымды сақиналар жүйесі. Бұл сақиналар Сатурнды бүкіл ғарыштағы ең көрнекті нысандардың бірі етеді.
+                </p>
+            </div>
+
+            <!-- Интересные факты (Қызықты Деректер) -->
+            <h3 class="text-2xl font-semibold text-saturn-accent mb-6 neon-glow border-b border-saturn-accent pb-2">
+                Қызықты Деректер (DATA ARRAY)
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm md:text-base">
+                
+                <div class="fact-item">
+                    <span class="fact-title">Сақиналар Жүйесі:</span>
+                    Оның жеті негізгі тобы бар (A, B, C, D, E, F, G), олар <span class="text-saturn-primary">триллиондаған мұз бөлшектерінен</span> тұрады.
+                </div>
+                
+                <div class="fact-item">
+                    <span class="fact-title">Төмен Тығыздық:</span>
+                    Сатурнның орташа тығыздығы судың тығыздығынан аз. Егер оны су толтырылған үлкен ваннаға салса, ол <span class="text-saturn-accent">бетінде жүзіп кетер</span> еді.
+                </div>
+                
+                <div class="fact-item">
+                    <span class="fact-title">Титан Серігі:</span>
+                    Оның ең үлкен серігі — <span class="text-saturn-primary">Титан</span>, тығыз атмосферасы бар жалғыз серік және бетінде сұйық метан көлдері бар.
+                </div>
+                
+                <div class="fact-item">
+                    <span class="fact-title">Тәулік Жылдамдығы:</span>
+                    Сатурнның бір тәулігі өте қысқа, шамамен <span class="text-saturn-accent">10.7 сағатқа</span> созылады. Бұл оның экваторының ісінуіне себеп болады.
+                </div>
+
+                <div class="fact-item">
+                    <span class="fact-title">Екінші Үлкен Алып:</span>
+                    Юпитерден кейінгі Күн жүйесіндегі <span class="text-saturn-primary">екінші үлкен</span> планета.
+                </div>
+
+                <div class="fact-item">
+                    <span class="fact-title">Ғарыштық Миссия:</span>
+                    <span class="text-saturn-accent">"Кассини-Гюйгенс"</span> миссиясы 2004 жылдан 2017 жылға дейін Сатурн мен оның серіктерін толығымен зерттеді.
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-auto p-4 text-slate-600 text-sm">
+        <p class="font-mono">
+            [ КОНЕЦ ПЕРЕДАЧИ ДАННЫХ ] | Кәсіби даму мақсатында жасалған.
+        </p>
+    </footer>
+
+</body>
+</html>
